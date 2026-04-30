@@ -3,11 +3,6 @@ description: Read-only reviewer focused on correctness, regressions, security, p
 mode: subagent
 temperature: 0.1
 permission:
-  read:
-    "*": allow
-    "*.env": deny
-    "*.env.*": deny
-    "*.env.example": allow
   glob: allow
   grep: ask
   lsp: allow

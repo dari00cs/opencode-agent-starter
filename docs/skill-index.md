@@ -1,8 +1,8 @@
 # Skill Index
 
 Readable skills live in grouped folders under `skills/`. OpenCode discovers
-skills from flat folders, so `.opencode/skills/` mirrors those groups in the
-shape OpenCode expects.
+skills from flat folders, so run `./scripts/sync-opencode-skills.sh` to generate
+the local `.opencode/skills/<skill-name>/SKILL.md` import folders.
 
 Human groups:
 
@@ -68,6 +68,18 @@ Human groups:
 
 Tool-dependent concept workflows are kept under `extras/` instead of the active
 OpenCode skill folder.
+
+## Sync For OpenCode
+
+Run this after cloning, copying, or editing grouped skills:
+
+```bash
+./scripts/sync-opencode-skills.sh
+./scripts/sync-opencode-skills.sh --check
+```
+
+The generated `.opencode/skills/` folders are ignored by git. Keep editing
+`skills/`.
 
 ## Adding More Later
 

@@ -3,11 +3,6 @@ description: Read-only verifier for choosing checks, running safe verification, 
 mode: subagent
 temperature: 0.1
 permission:
-  read:
-    "*": allow
-    "*.env": deny
-    "*.env.*": deny
-    "*.env.example": allow
   glob: allow
   grep: ask
   lsp: allow

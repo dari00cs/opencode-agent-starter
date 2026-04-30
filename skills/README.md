@@ -9,5 +9,6 @@ These are the readable source skills, grouped by purpose.
 - `advanced-and-optional/`: specialized skills that are useful later, not day
   one.
 
-OpenCode discovers skills from flat paths, so `.opencode/skills/` contains a
-flat compatibility mirror that points back to these grouped folders.
+OpenCode discovers skills from flat paths. From the repo root, run
+`./scripts/sync-opencode-skills.sh` to generate
+`.opencode/skills/<skill-name>/SKILL.md` folders locally.

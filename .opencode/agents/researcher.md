@@ -3,11 +3,6 @@ description: Read-only researcher for current docs, APIs, GitHub issues, communi
 mode: subagent
 temperature: 0.2
 permission:
-  read:
-    "*": allow
-    "*.env": deny
-    "*.env.*": deny
-    "*.env.example": allow
   glob: allow
   grep: ask
   webfetch: ask

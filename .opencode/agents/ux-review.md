@@ -3,11 +3,6 @@ description: Read-only UI and copy reviewer for product feel, accessibility, mob
 mode: subagent
 temperature: 0.2
 permission:
-  read:
-    "*": allow
-    "*.env": deny
-    "*.env.*": deny
-    "*.env.example": allow
   glob: allow
   grep: ask
   lsp: allow

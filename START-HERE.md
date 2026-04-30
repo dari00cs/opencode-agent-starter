@@ -20,9 +20,16 @@ you would use for my task before making changes.
 - `AGENTS.md`: main behavior rules.
 - `.opencode/agents/`: focused helpers.
 - `skills/`: grouped skill library for humans.
-- `.opencode/skills/`: flat OpenCode compatibility mirror.
+- `.opencode/skills/`: generated OpenCode skill import target.
+- `scripts/sync-opencode-skills.sh`: creates the flat OpenCode skill folders.
 - `.opencode/commands/`: shortcut prompts.
 - `docs/skill-index.md`: grouped skill routing guide.
+
+Run this once after cloning or copying the repo:
+
+```bash
+./scripts/sync-opencode-skills.sh
+```
 
 ## First Commands
 

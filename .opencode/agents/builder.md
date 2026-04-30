@@ -3,11 +3,6 @@ description: Scoped implementation worker for concrete, bounded code changes aft
 mode: subagent
 temperature: 0.2
 permission:
-  read:
-    "*": allow
-    "*.env": deny
-    "*.env.*": deny
-    "*.env.example": allow
   glob: allow
   grep: ask
   lsp: allow

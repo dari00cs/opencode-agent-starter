@@ -16,25 +16,26 @@ a beginner can inspect before using.
 ## What's Included
 
 - `AGENTS.md`: the main behavior contract
-- `CLAUDE.md`: Claude Code bridge that imports `AGENTS.md`
+- `CLAUDE.md`: Claude Code bridge for the behavior contract
 - `opencode.jsonc`: project instructions and beginner-safe permissions
 - `.opencode/agents/`: focused subagents
 - `.opencode/commands/`: daily shortcut commands
 - `skills/`: readable grouped skill library
-- `.opencode/skills/`: flat OpenCode compatibility mirror
+- `.opencode/skills/`: generated OpenCode skill import target
+- `scripts/sync-opencode-skills.sh`: builds the flat OpenCode skill folders
 - `docs/skill-index.md`: grouped skill routing guide
 - `extras/`: optional tool-dependent workflows that are not loaded by default
 
 ## Quick Start
 
 Use this as a template repo, or copy the setup into an existing project.
-Prefer `git clone` so the `.opencode/skills` mirror links are preserved.
 
 For a new sandbox project:
 
 ```bash
 git clone https://github.com/dari00cs/opencode-agent-starter.git
 cd opencode-agent-starter
+./scripts/sync-opencode-skills.sh
 opencode
 ```
 
@@ -47,6 +48,7 @@ START-HERE.md
 opencode.jsonc
 .opencode/
 skills/
+scripts/sync-opencode-skills.sh
 docs/skill-index.md
 extras/
 ```
@@ -54,9 +56,22 @@ extras/
 If the project already has `AGENTS.md`, `opencode.jsonc`, `.opencode/`, or
 `CLAUDE.md`, merge the ideas instead of blindly overwriting them.
 
+After copying into an existing project, run:
+
+```bash
+./scripts/sync-opencode-skills.sh
+```
+
 ## Verify It Loaded
 
-From the project root, start OpenCode and check:
+From the project root, check the generated skills, then start OpenCode:
+
+```bash
+./scripts/sync-opencode-skills.sh --check
+opencode
+```
+
+Inside OpenCode:
 
 - type `/` and look for `/plan`, `/debug`, `/frontend`, `/review`, `/verify`, `/ship`
 - type `@` and look for `@explorer`, `@builder`, `@reviewer`, `@researcher`, `@ux-review`, `@verifier`
@@ -67,8 +82,9 @@ From the project root, start OpenCode and check:
 The readable skill library is grouped under `skills/`.
 
 OpenCode discovers skills from flat folders like
-`.opencode/skills/<skill-name>/SKILL.md`, so `.opencode/skills/` mirrors the
-grouped library in a flat shape for compatibility.
+`.opencode/skills/<skill-name>/SKILL.md`. This repo keeps the source grouped
+for humans and uses `scripts/sync-opencode-skills.sh` to generate the flat
+OpenCode folders locally.
 
 Start with:
 
@@ -113,4 +129,5 @@ OpenCode built-ins: `/init`, `/undo`, `/redo`, `/share`, and `/help`.
 
 Keep the repo easy to read, but do not flatten the included skills into vague
 summaries. When a skill applies, the agent should read the actual grouped
-`SKILL.md` and follow it.
+`SKILL.md` and follow it. The `.opencode/skills/` folders are generated for
+OpenCode compatibility, not the source of truth.

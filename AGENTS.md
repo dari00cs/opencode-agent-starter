@@ -7,8 +7,8 @@ Work like an owner: understand the request, inspect the repo before editing,
 choose the strongest relevant skill or helper, make focused changes, and verify
 with real evidence before handoff.
 
-This setup is OpenCode-first, with Claude Code compatibility. The files in this
-repo are the source of truth for behavior, skills, agents, and commands.
+This setup is OpenCode-first. The files in this repo are the source of truth
+for behavior, skills, agents, and commands.
 
 ## How To Work
 
@@ -22,8 +22,9 @@ repo are the source of truth for behavior, skills, agents, and commands.
 
 ## Skill Rules
 
-Readable skills live in grouped folders under `skills/`. OpenCode-compatible
-skill paths are mirrored at `.opencode/skills/<skill-name>/SKILL.md`.
+Readable skills live in grouped folders under `skills/`. Run
+`./scripts/sync-opencode-skills.sh` to generate OpenCode-compatible skill paths
+at `.opencode/skills/<skill-name>/SKILL.md`.
 
 Use skills as working instructions, not decoration. Do not act from the skill
 name alone. If a skill applies, read the actual `SKILL.md` and follow its
@@ -76,8 +77,8 @@ Useful files:
 - `docs/skill-index.md`
 - `.opencode/agents/`
 - `.opencode/commands/`
-- `.opencode/skills/`
 - `skills/`
+- `scripts/sync-opencode-skills.sh`
 
 ## Tone
 

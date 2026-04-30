@@ -1,8 +1,17 @@
-# OpenCode Skill Mirror
+# Generated OpenCode Skill Folder
 
-OpenCode expects skills at `.opencode/skills/<skill-name>/SKILL.md`.
+This folder is the local OpenCode import target.
 
-The readable source lives in `../../skills/`, grouped by purpose. This folder is
-a flat compatibility mirror so OpenCode can still discover every skill.
+The repo only tracks this README here. The readable skill source lives in
+`../../skills/`, grouped by purpose.
 
-Edit the grouped source folders, not this mirror.
+Run this from the repo root before starting OpenCode:
+
+```bash
+./scripts/sync-opencode-skills.sh
+```
+
+That creates real flat folders like `.opencode/skills/<skill-name>/SKILL.md`
+from the grouped source. Generated skill folders are ignored by git.
+
+Edit the grouped source folders, then run the sync script again.
