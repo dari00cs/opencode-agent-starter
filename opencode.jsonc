@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  "instructions": [
+    "START-HERE.md",
+    "docs/skill-index.md"
+  ],
+
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "glob": "allow",
+    "grep": "ask",
+    "lsp": "allow",
+    "todowrite": "allow",
+    "external_directory": "ask",
+    "task": "ask",
+    "webfetch": "ask",
+    "websearch": "ask",
+    "codesearch": "ask",
+    "question": "allow",
+    "doom_loop": "ask",
+    "edit": "ask",
+    "bash": "ask",
+    "skill": {
+      "*": "allow"
+    }
+  }
+}
