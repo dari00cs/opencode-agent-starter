@@ -22,7 +22,8 @@ repo are the source of truth for behavior, skills, agents, and commands.
 
 ## Skill Rules
 
-Skills live in `.opencode/skills/<skill-name>/SKILL.md`.
+Readable skills live in grouped folders under `skills/`. OpenCode-compatible
+skill paths are mirrored at `.opencode/skills/<skill-name>/SKILL.md`.
 
 Use skills as working instructions, not decoration. Do not act from the skill
 name alone. If a skill applies, read the actual `SKILL.md` and follow its
@@ -76,6 +77,7 @@ Useful files:
 - `.opencode/agents/`
 - `.opencode/commands/`
 - `.opencode/skills/`
+- `skills/`
 
 ## Tone
 

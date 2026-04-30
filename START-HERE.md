@@ -19,8 +19,8 @@ you would use for my task before making changes.
 
 - `AGENTS.md`: main behavior rules.
 - `.opencode/agents/`: focused helpers.
-- `.opencode/skills/`: Superpowers and frontend/taste skills.
-- `.opencode/skills/_groups/`: skill groups for humans.
+- `skills/`: grouped skill library for humans.
+- `.opencode/skills/`: flat OpenCode compatibility mirror.
 - `.opencode/commands/`: shortcut prompts.
 - `docs/skill-index.md`: grouped skill routing guide.
 
@@ -48,5 +48,4 @@ For frontend work, start with `frontend-skill`, `taste-skill`,
 `react-best-practices`, and `shadcn` when relevant. Tool-dependent concept
 workflows live under `extras/` and are not loaded by default.
 
-When the skill list feels confusing, open
-`.opencode/skills/_groups/start-here.md` first.
+When the skill list feels confusing, open `skills/README.md` first.

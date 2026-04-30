@@ -1,15 +1,15 @@
 # Skill Index
 
-OpenCode discovers active skills from flat folders:
-`.opencode/skills/<skill-name>/SKILL.md`.
+Readable skills live in grouped folders under `skills/`. OpenCode discovers
+skills from flat folders, so `.opencode/skills/` mirrors those groups in the
+shape OpenCode expects.
 
-Keep the active folders flat. The grouped files below are human maps, not active
-skills:
+Human groups:
 
-- `.opencode/skills/_groups/start-here.md`
-- `.opencode/skills/_groups/superpowers.md`
-- `.opencode/skills/_groups/frontend-and-taste.md`
-- `.opencode/skills/_groups/advanced-and-optional.md`
+- `skills/superpowers/`
+- `skills/frontend-and-taste/`
+- `skills/react-and-components/`
+- `skills/advanced-and-optional/`
 
 ## Start With These
 

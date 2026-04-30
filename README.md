@@ -20,14 +20,15 @@ a beginner can inspect before using.
 - `opencode.jsonc`: project instructions and beginner-safe permissions
 - `.opencode/agents/`: focused subagents
 - `.opencode/commands/`: daily shortcut commands
-- `.opencode/skills/`: Superpowers plus frontend/taste skills
-- `.opencode/skills/_groups/`: human-friendly skill group guides
+- `skills/`: readable grouped skill library
+- `.opencode/skills/`: flat OpenCode compatibility mirror
 - `docs/skill-index.md`: grouped skill routing guide
 - `extras/`: optional tool-dependent workflows that are not loaded by default
 
 ## Quick Start
 
 Use this as a template repo, or copy the setup into an existing project.
+Prefer `git clone` so the `.opencode/skills` mirror links are preserved.
 
 For a new sandbox project:
 
@@ -45,6 +46,7 @@ CLAUDE.md
 START-HERE.md
 opencode.jsonc
 .opencode/
+skills/
 docs/skill-index.md
 extras/
 ```
@@ -62,9 +64,11 @@ From the project root, start OpenCode and check:
 
 ## Skills
 
+The readable skill library is grouped under `skills/`.
+
 OpenCode discovers skills from flat folders like
-`.opencode/skills/<skill-name>/SKILL.md`. The folders stay flat on purpose.
-Use `.opencode/skills/_groups/` or `docs/skill-index.md` for grouped routing.
+`.opencode/skills/<skill-name>/SKILL.md`, so `.opencode/skills/` mirrors the
+grouped library in a flat shape for compatibility.
 
 Start with:
 
@@ -81,10 +85,10 @@ real project workflow needs them.
 
 Human-friendly groups:
 
-- `.opencode/skills/_groups/start-here.md`
-- `.opencode/skills/_groups/superpowers.md`
-- `.opencode/skills/_groups/frontend-and-taste.md`
-- `.opencode/skills/_groups/advanced-and-optional.md`
+- `skills/superpowers/`
+- `skills/frontend-and-taste/`
+- `skills/react-and-components/`
+- `skills/advanced-and-optional/`
 
 ## First Prompt
 
@@ -108,5 +112,5 @@ OpenCode built-ins: `/init`, `/undo`, `/redo`, `/share`, and `/help`.
 ## Philosophy
 
 Keep the repo easy to read, but do not flatten the included skills into vague
-summaries. When a skill applies, the agent should read the actual `SKILL.md`
-and follow it.
+summaries. When a skill applies, the agent should read the actual grouped
+`SKILL.md` and follow it.
