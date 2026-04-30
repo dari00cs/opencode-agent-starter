@@ -1,21 +1,24 @@
 # Skill Index
 
-The actual skills live in flat OpenCode folders:
+OpenCode discovers active skills from flat folders:
 `.opencode/skills/<skill-name>/SKILL.md`.
 
-Do not nest the skill folders by category. OpenCode discovers them from the
-flat folder layout. This file is the human-friendly grouping.
+Keep the active folders flat. The grouped files below are human maps, not active
+skills:
+
+- `.opencode/skills/_groups/start-here.md`
+- `.opencode/skills/_groups/superpowers.md`
+- `.opencode/skills/_groups/frontend-and-taste.md`
+- `.opencode/skills/_groups/advanced-and-optional.md`
 
 ## Start With These
 
-- `using-superpowers`: first skill for non-trivial work; teaches the agent to
-  load skills instead of guessing.
-- `systematic-debugging`: use for bugs, errors, failing tests, and weird
-  behavior.
-- `verification-before-completion`: use before saying work is done.
+- `using-superpowers`: first skill for non-trivial work.
+- `systematic-debugging`: bugs, errors, failing tests, and weird behavior.
+- `verification-before-completion`: before saying work is done.
 - `frontend-skill`: default frontend/UI quality bar.
 - `taste-skill`: default premium frontend taste layer.
-- `react-best-practices`: React and Next.js performance/reliability guidance.
+- `react-best-practices`: React and Next.js reliability/performance.
 
 ## Daily Workflow
 
@@ -27,7 +30,7 @@ flat folder layout. This file is the human-friendly grouping.
 - `/verify`: read-only verification pass.
 - `/ship`: final skeptical handoff check.
 
-## Superpowers Core
+## Superpowers
 
 - `using-superpowers`
 - `executing-plans`
@@ -36,16 +39,8 @@ flat folder layout. This file is the human-friendly grouping.
 - `verification-before-completion`
 - `requesting-code-review`
 - `receiving-code-review`
-
-## Superpowers Planning
-
-- `brainstorming`: large or creative work where intent needs shaping. This can
-  create design docs, so do not use it for tiny edits.
-- `writing-plans`: turn approved requirements into a detailed implementation
-  plan.
-
-## Superpowers Advanced
-
+- `brainstorming`
+- `writing-plans`
 - `subagent-driven-development`
 - `dispatching-parallel-agents`
 - `finishing-a-development-branch`
@@ -56,27 +51,23 @@ flat folder layout. This file is the human-friendly grouping.
 
 - `frontend-skill`
 - `taste-skill`
-- `react-best-practices`
-- `shadcn`
 - `redesign-skill`
-
-## Optional Style Flavors
-
 - `gpt-tasteskill`
 - `minimalist-skill`
 - `soft-skill`
 - `brutalist-skill`
 
-Use these only when the user clearly asks for that direction. Otherwise default
-to `taste-skill`.
+## React And Components
+
+- `react-best-practices`
+- `shadcn`
 
 ## Optional Tool-Dependent Skills
 
 - `stitch-skill`
 
 Tool-dependent concept workflows are kept under `extras/` instead of the active
-OpenCode skill folder. Bring them in only after the project has the required
-tools.
+OpenCode skill folder.
 
 ## Adding More Later
 

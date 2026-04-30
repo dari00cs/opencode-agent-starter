@@ -21,6 +21,7 @@ a beginner can inspect before using.
 - `.opencode/agents/`: focused subagents
 - `.opencode/commands/`: daily shortcut commands
 - `.opencode/skills/`: Superpowers plus frontend/taste skills
+- `.opencode/skills/_groups/`: human-friendly skill group guides
 - `docs/skill-index.md`: grouped skill routing guide
 - `extras/`: optional tool-dependent workflows that are not loaded by default
 
@@ -63,7 +64,7 @@ From the project root, start OpenCode and check:
 
 OpenCode discovers skills from flat folders like
 `.opencode/skills/<skill-name>/SKILL.md`. The folders stay flat on purpose.
-Use `docs/skill-index.md` for grouped routing.
+Use `.opencode/skills/_groups/` or `docs/skill-index.md` for grouped routing.
 
 Start with:
 
@@ -77,6 +78,13 @@ Start with:
 Optional advanced skills are included, but a beginner does not need to learn
 them all on day one. Start with the daily loop, then add new tools only when a
 real project workflow needs them.
+
+Human-friendly groups:
+
+- `.opencode/skills/_groups/start-here.md`
+- `.opencode/skills/_groups/superpowers.md`
+- `.opencode/skills/_groups/frontend-and-taste.md`
+- `.opencode/skills/_groups/advanced-and-optional.md`
 
 ## First Prompt
 
